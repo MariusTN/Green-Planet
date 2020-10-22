@@ -25,6 +25,14 @@ body {
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(228, 244, 253) 100%);
 }
 
+img{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: auto;
+    height: auto;
+}
+
 //header style
 header {
     display: flex;
@@ -69,6 +77,7 @@ button:focus {
     cursor: pointer;
     font-size: $button;
     margin-right: 3rem;
+    padding: 1.4rem 3rem;
 }
 
 //style class for all green buttons
@@ -182,11 +191,7 @@ button:focus {
         }
     }
 
-img{
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
+
 
     .cards{
         margin-top: 3rem;
