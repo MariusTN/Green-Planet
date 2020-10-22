@@ -1,39 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;600&display=swap');
 
 $background-color: #D7F0FC;
-$big-font: 3.2rem;
-$text: 1.6rem;
+$big-font: calc(4rem + 1vw);
+$text-hero: calc(1rem + 1vw);
 $button: 2rem;
 $green: #34A853;
+$gray: #7c7c7c;
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-family: 'Heebo', sans-serif;
 
     background: #fff;
-    // background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(215,240,252,1) 100%); v1
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(228, 244, 253) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(228, 244, 253) 100%);
 }
 
-header
-{
+//header style
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 10rem;
-    
-    .logo{
+
+    //logo style
+    .logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,48 +42,232 @@ header
         font-weight: 600;
         margin: auto 4rem;
 
+        //resize planet image
         img {
             padding-left: 3rem;
             padding-right: 1rem;
             height: auto;
             width: 50%;
-            }
         }
+    }
 }
 
-button{
+//setting btn main font
+button {
     font-family: 'Heebo', sans-serif;
 }
 
-button:focus{
+//remove ouline (looks better)
+button:focus {
     outline: none;
 }
 
-.btn-transparent{
+//transparent button in header
+.btn-transparent {
     background: none;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     font-size: $button;
     margin-right: 3rem;
 }
 
-.btn-green{
+//style class for all green buttons
+.btn-green {
     margin-right: 6rem;
     padding: 1.4rem 3rem;
 
     background: $green;
-    border:none;
+    border: none;
+    border-radius: 3rem;
+
+    font-size: $button;
+    color: white;
+
+    cursor: pointer;
+    transition: all 2s ease;
+
+    &:hover {
+        background-color: #1c7534;
+
+    }
+}
+
+.btn-more {
+    margin-right: 6rem;
+    padding: 1.4rem 3rem;
+
+    background: none;
+    border: 4px solid rgb(251, 122, 29);
     border-radius: 3rem;
 
     font-size: $button;
 
     cursor: pointer;
+    transition: all 2s ease;
 
-    &:hover{
-        background-color: #298040;
-        transition: all 0.5s ease;
+    &:hover {
+        border: 4px solid green;
+    }
+}
+
+//hero
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+
+    //left side of hero
+    .left {
+        flex: 1 1 40rem;
+        text-align: start;
+        justify-items: center;
+        align-self: center;
+
+        // header inside left side of hero
+        h1 {
+            min-width: 100%;
+            height: auto;
+            font-size: $big-font;
+            margin-bottom: 2rem;
+
+            span {
+                color: $green
+            }
+        }
+
+        p {
+            font-size: $text-hero;
+            color: $gray;
+            font-weight: 200;
+            margin: 2rem 0rem;
+        }
+
+    }
+
+    //right side of hero
+    .right {
+        flex: 1 1 40rem;
+        text-align: center;
+        svg {
+            height: auto;
+            width: 110%;
+        }
+    }
+}
+
+//middle part
+.jtc {
+    margin: 2rem auto;
+    width: 90%;
+    height: 50vh;
+
+    .text-jtc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: $gray;
+            text-align: center;
+        }
+    }
+
+img{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+    .cards{
+        margin-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        .box{
+            width: 45rem;
+            height: 30rem;
+            // border: 3px solid red;
+            margin: 0 auto;
+
+            img{
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+            }
+            
+            h3{
+                text-align: center;
+                font-size: 3rem;
+            }
+            p{
+                
+                font-size: 2rem;
+                text-align: center;
+                color: $gray;
+            }
+        }
     }
 }
 
 
+//animations
 
+#nor1 {
+    animation: norisor1 5s ease infinite alternate-reverse;
+    fill: rgb(236, 234, 234);
+    stroke: none;
+}
+
+#nor2 {
+    animation: norisor2 4s ease infinite alternate;
+    fill: rgb(165, 162, 162);
+    stroke: none;
+}
+
+#nor3 {
+    animation: norisor3 6s infinite alternate;
+    fill: rgb(240, 238, 238);
+    stroke: none;
+}
+
+@keyframes norisor1 {
+    from {
+        transform: translate(-20%, -15%);
+    }
+
+    to {
+        transform: translate(-32%, -15%);
+    }
+}
+
+@keyframes norisor2 {
+    from {
+        transform: translate(-50%, -25%);
+    }
+
+    to {
+        transform: translate(-43%, -25%);
+    }
+}
+
+@keyframes norisor3 {
+    from {
+        transform: translate(-50%, -14%);
+    }
+
+    to {
+        transform: translate(-56%, -10%);
+    }
+}
