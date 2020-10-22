@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(#e4f4fd));
+  background: linear-gradient(90deg, white 0%, #e4f4fd 100%);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10rem;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #34A853;
+  font-weight: 600;
+  margin: auto 4rem;
+}
+
+header .logo img {
+  padding-left: 3rem;
+  padding-right: 1rem;
+  height: auto;
+  width: 50%;
+}
+
+button {
+  font-family: 'Heebo', sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-transparent {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+
+.btn-green {
+  margin-right: 6rem;
+  padding: 1.4rem 3rem;
+  background: #34A853;
+  border: none;
+  border-radius: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.btn-green:hover {
+  background-color: #298040;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/*# sourceMappingURL=main.css.map */
