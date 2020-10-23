@@ -4,6 +4,8 @@
 I got a "dreamjob" in warehouse.
 I'm too scared to apply for juniors jobs :C
 
+Live Version: https://gp-mntanase.netlify.app
+
 My design is only for Desktop view, I will update this soon with Mobile respo'
 
 Many commits for ReadMe as I try to learn some to style.
